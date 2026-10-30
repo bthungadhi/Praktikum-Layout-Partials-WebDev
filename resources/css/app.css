@@ -9,3 +9,30 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+.body {
+    background-color: #ffffff;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: left;
+    color: #000000;
+}
+
+@layer components {
+    .wrap          { @apply max-w-7xl mx-auto px-4 md:px-8; }
+    .page-title    { @apply text-4xl md:text-5xl font-bold tracking-tight text-neutral-900; }
+    .section-title { @apply text-2xl md:text-3xl font-bold tracking-tight text-neutral-900; }
+    .lead          { @apply text-lg text-neutral-600; }
+    .band          { @apply bg-neutral-50 border-y border-neutral-200 py-16; }
+
+    .btn-dark   { @apply rounded-md bg-neutral-900 px-5 py-3 text-sm font-semibold text-white hover:bg-purple-700 transition-colors; }
+    .btn-light  { @apply rounded-md border border-neutral-300 px-5 py-3 text-sm font-semibold text-neutral-900 hover:border-neutral-900 transition-colors; }
+    .btn-purple { @apply rounded-md bg-purple-700 px-5 py-3 text-sm font-semibold text-white hover:bg-purple-800 transition-colors; }
+
+    .card           { @apply rounded-lg border border-neutral-200 bg-white overflow-hidden; }
+    .img-placeholder { @apply grid place-items-center bg-neutral-200 text-sm text-neutral-500; }
+    .tag            { @apply rounded-full border border-neutral-300 bg-white px-4 py-1.5 text-sm font-medium text-neutral-800; }
+
+    .field-label { @apply block text-sm font-medium text-neutral-900; }
+    .field       { @apply mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700; }
+    .field-error { @apply mt-1 text-sm text-red-600; }
+    .alert       { @apply rounded-md bg-purple-50 px-4 py-3 text-sm text-purple-900; }
+}
